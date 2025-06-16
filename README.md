@@ -19,13 +19,13 @@ This project provides a secure API service built with Flask that enables users t
 
 3.  **Test Locally:**
 
-        ```bash
-            curl -X POST https://localhost:8080/execute \
-            -H "Content-Type: application/json" \
-            -d '{
-                "script": "import json, numpy as np\ndef main():\n    return {\"sum\": int(np.sum([1, 2, 3]))}"
-            }'
-        ```
+    ```bash
+        curl -X POST https://localhost:8080/execute \
+        -H "Content-Type: application/json" \
+        -d '{
+            "script": "import json, numpy as np\ndef main():\n    return {\"sum\": int(np.sum([1, 2, 3]))}"
+        }'
+    ```
 
 ## Deployment to Google Cloud Run
 
@@ -35,10 +35,10 @@ The following examples assume the service has been deployed and is accessible at
 `https://python-app-10467047585.northamerica-northeast1.run.app` .
 
 
-    ```bash
-        curl -X POST https://python-app-10467047585.northamerica-northeast1.run.app/execute \
-        -H "Content-Type: application/json" \
-        -d '{
-            "script": "import json, numpy as np\ndef main():\n    return {\"sum\": int(np.sum([1, 2, 3]))}"
-        }'
-    ```
+```bash
+    curl -X POST https://python-app-10467047585.northamerica-northeast1.run.app/execute \
+    -H "Content-Type: application/json" \
+    -d '{
+        "script": "import json, numpy as np\ndef main():\n    return {\"sum\": int(np.sum([1, 2, 3]))}"
+    }'
+```
